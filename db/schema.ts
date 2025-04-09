@@ -1,6 +1,6 @@
 import { pgTable, serial, uuid, text, timestamp } from "drizzle-orm/pg-core";
 
-export const usersTable = pgTable("users_table", {
+export const usersTable = pgTable("users", {
   id: uuid("id").primaryKey().defaultRandom(),
   name: text("name").notNull(),
   email: text("email").notNull().unique(),
@@ -11,7 +11,7 @@ export const usersTable = pgTable("users_table", {
     .$onUpdate(() => new Date()),
 });
 
-export const postsTable = pgTable("posts_table", {
+export const postsTable = pgTable("posts", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
   content: text("content").notNull(),
