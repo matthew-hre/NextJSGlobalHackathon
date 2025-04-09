@@ -41,3 +41,41 @@ n) (maybe off track) Jobs Portal
 - Nix <3 + Mise
 - Husky + ESLint
 - Vercel AI SDK + Command A? GPT? Whatever
+
+## Local Development
+
+### Dependencies
+
+```bash
+nix develop
+```
+
+### Supabase
+
+```bash
+pnpm exec supabase init
+pnpm exec supabase start
+```
+
+You may need sudo for starting up Supabase:
+
+```bash
+sudo pnpm exec supabase start
+```
+
+After starting Supabase locally, you'll need to move the output from the
+command into your `.env.local` file. Here are the credentials you need to
+care about:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
+
+(The keys from the actual Supabase project should go in `env.production`, and should basically never be touched)
+
+Next, run your migrations:
+
+```bash
+pnpm exec supabase db push
+```
