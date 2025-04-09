@@ -39,6 +39,32 @@ export const signUpAction = async (formData: FormData) => {
   }
 };
 
+export async function signInWithGithubAction() {
+  const supabase = await createClient();
+  const origin = (await headers()).get("origin");
+
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: "github",
+    options: {
+      redirectTo: `${origin}/auth/callback`,
+    },
+  });
+
+  if (error) {
+    return encodedRedirect("error", "/sign-in", error.message);
+  }
+
+  if (data?.url) {
+    return redirect(data.url);
+  }
+
+  return encodedRedirect(
+    "error",
+    "/sign-in",
+    "Something went wrong while signing in with GitHub.",
+  );
+}
+
 export const signInAction = async (formData: FormData) => {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;

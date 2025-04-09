@@ -252,6 +252,16 @@ url = ""
 # If enabled, the nonce check will be skipped. Required for local sign in with Google auth.
 skip_nonce_check = false
 
+# NOTE:
+# Github only allows one redirect URL for OAuth apps. When we move to prod,
+# we'll need to switch back to the production URL. Which sucks.
+[auth.external.github]
+enabled = true
+client_id = "env(GITHUB_CLIENT_ID)"
+secret = "env(GITHUB_SECRET)"
+# Overrides the default auth redirectUrl.
+redirect_uri = "http://localhost:54321/auth/v1/callback"
+
 # Use Firebase Auth as a third-party provider alongside Supabase Auth.
 [auth.third_party.firebase]
 enabled = false
