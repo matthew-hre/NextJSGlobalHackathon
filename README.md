@@ -17,19 +17,19 @@
 
 ## the _future_ (not necessarily listed in order of importance)
 
-a) Difficulty levels (a single button -> entire shadcn blocks)
-b) Users are showcased on a global leaderboard (weekly, daily, all-time)
-c) Real-time view of what other people are making (Tetris 99)
-d) Friends -> invite to Lobby
-e) Subscription plan for higher lobby limits
-f) Stake pools (5$ entry fees, 10% goes to us, winner takes all)
-g) AI / V0 opponent (singleplayer?)
-h) Blitz Mode (do as many as you can, average score against everyone else)
-i) Classical (Full site)
-j) Status Tracker / heatmap / logins / social page / KD Ratio
-k) Freeform Mode (Text prompt, build whatever) (Minecraft Build-Wars style) (One person sits out and judges every round)
-l) Rank (ranked #27th worldwide) (Bronze III) (rank-amber-500)
-m) Talent Acquisition (Who's the best, can I hire them) (LinkedIn / Github on the profile)
+a) Difficulty levels (a single button -> entire shadcn blocks)\
+b) Users are showcased on a global leaderboard (weekly, daily, all-time)\
+c) Real-time view of what other people are making (Tetris 99)\
+d) Friends -> invite to Lobby\
+e) Subscription plan for higher lobby limits\
+f) Stake pools (5$ entry fees, 10% goes to us, winner takes all)\
+g) AI / V0 opponent (singleplayer?)\
+h) Blitz Mode (do as many as you can, average score against everyone else)\
+i) Classical (Full site)\
+j) Status Tracker / heatmap / logins / social page / KD Ratio\
+k) Freeform Mode (Text prompt, build whatever) (Minecraft Build-Wars style) (One person sits out and judges every round)\
+l) Rank (ranked #27th worldwide) (Bronze III) (rank-amber-500)\
+m) Talent Acquisition (Who's the best, can I hire them) (LinkedIn / Github on the profile)\
 n) (maybe off track) Jobs Portal
 
 ## Tech Stack
